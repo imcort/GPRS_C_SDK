@@ -81,6 +81,9 @@ typedef int64_t   s64_t;
 typedef uint64_t  u64_t;
 #endif
 
+typedef long long          intmax_t;
+typedef unsigned long long uintmax_t;
+
 #ifndef INT8_MIN
 #define INT8_MIN       (-0x7f-1)
 #endif
@@ -157,6 +160,10 @@ typedef uint64_t  u64_t;
 
 typedef unsigned int   intptr_t;
 
+#ifndef __UINTPTR_T__
+typedef unsigned int        uintptr_t;
+#define __UINTPTR_T__
+#endif
 
 typedef signed char        int_least8_t;
 typedef short              int_least16_t;

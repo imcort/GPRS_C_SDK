@@ -22,12 +22,14 @@ LOCAL_ADD_INCLUDE := include \
                      include/api_inc \
                      libs/lvgl \
                      libs/lvgl/src \
-                     libs/lvgl/src/lv_core \
-                     libs/lvgl/src/lv_draw \
-                     libs/lvgl/src/lv_hal \
-                     libs/lvgl/src/lv_misc \
-                     libs/lvgl/src/lv_objx \
-                     libs/lvgl/src/lv_themes 
+                     libs/lvgl/src/src \
+                     libs/lvgl/src/src/lv_core \
+                     libs/lvgl/src/src/lv_draw \
+                     libs/lvgl/src/src/lv_font \
+                     libs/lvgl/src/src/lv_hal \
+                     libs/lvgl/src/src/lv_misc \
+                     libs/lvgl/src/src/lv_widgets \
+                     libs/lvgl/src/src/lv_themes 
 
                     
 # `yes` if have submodule or left empty  or `no`
@@ -46,13 +48,13 @@ LOCAL_EXPORT_FLAG += LVGL_CONFIG_FILE=\"${CFG_LVGL_CONFIG_FILE}\"
 ## ------------------------------------- ##
 S_SRC := ${notdir ${wildcard src/*.s}}
 C_SRC := ${notdir ${wildcard src/*.c}}
-C_SRC_FILES +=  ${wildcard src/lv_core/*.c} \
-                ${wildcard src/lv_draw/*.c} \
-                ${wildcard src/lv_hal/*.c} \
-                ${wildcard src/lv_misc/*.c} \
-                ${wildcard src/lv_objx/*.c} \
-                ${wildcard src/lv_themes/*.c} \
-                ${wildcard src/lv_misc/lv_fonts/*.c} 
+C_SRC_FILES +=  ${wildcard src/src/lv_core/*.c} \
+                ${wildcard src/src/lv_draw/*.c} \
+                ${wildcard src/src/lv_font/*.c} \
+                ${wildcard src/src/lv_hal/*.c} \
+                ${wildcard src/src/lv_misc/*.c} \
+                ${wildcard src/src/lv_themes/*.c} \
+                ${wildcard src/src/lv_widgets/*.c} 
 
 
 
